@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .background {
+        background-color: #cccc;
+      }
+      .box {
+        width: 250px;
+        height: 200px;
+        margin-bottom: 20px;
+        background-color: antiquewhite;
+      }
+      .colored {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box colored" id="coloredBox"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <script>
+      const special = document.getElementById("coloredBox");
+      special.addEventListener("click", (event) => {
+        rect = special.getBoundingClientRect();
+        console.log(rect);
+        console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`);
+        console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`);
+      });
+    </script>
+  </body>
+</html>
